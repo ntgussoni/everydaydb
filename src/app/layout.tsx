@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Inter as FontSans, Source_Code_Pro } from "next/font/google";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
         <TRPCReactProvider>
           <Navbar />
           {children}
+          <Analytics />
         </TRPCReactProvider>
       </body>
     </html>

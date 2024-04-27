@@ -39,15 +39,15 @@ const features: FeatureProps[] = [
 
 const featureList: string[] = ["CLI", "Client libraries", "API"];
 
-const D = ({ children, className }) => (
+const D = ({ children, className = "" }) => (
   <span className={cn(className, "text-gray-700")}>{children}</span>
 );
 
-const V = ({ children, className }) => (
+const V = ({ children, className = "" }) => (
   <span className={cn(className, "text-[#ff9c46d4]")}>{children}</span>
 );
 
-const M = ({ children, className }) => (
+const M = ({ children, className = "" }) => (
   <span className={cn(className, "text-[red]")}>{children}</span>
 );
 

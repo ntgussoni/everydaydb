@@ -106,6 +106,8 @@ export function BeNotified() {
           />
           <div className="mb-8 mt-4 h-full">
             <Textarea
+              value={reason}
+              onChange={(e) => setReason(e.target.value)}
               id="reason"
               name="reason"
               className="col-span-3"

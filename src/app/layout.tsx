@@ -58,7 +58,6 @@ export default function RootLayout({
         )}
       >
         <TRPCReactProvider>
-          <Navbar />
           {children}
           <Analytics />
         </TRPCReactProvider>

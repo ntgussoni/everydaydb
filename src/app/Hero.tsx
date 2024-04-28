@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { BeNotified } from "./_components/be-notified";
 import TextAnim from "./TextAnim";
 import { AnimatePresence, motion } from "framer-motion";
+import dashboardImg from "./dashboad.png";
+import Image from "next/image";
 const texts = ["every day data", "makers", "developers", "everyone", "you"];
 export const Hero = () => {
   const [index, setIndex] = useState<number>(0);
@@ -58,7 +60,7 @@ export const Hero = () => {
                 </motion.span>
               </AnimatePresence>
             </div>
-          </h1>{" "}
+          </h1>
         </main>
 
         <p className="mx-auto max-w-xl items-center justify-center text-center text-xl text-primary-foreground lg:mx-0">
@@ -76,6 +78,11 @@ export const Hero = () => {
       </div>
 
       <div className="shadow"></div>
+      <Image
+        src={dashboardImg}
+        alt="dashboard image"
+        className="rounded-lg shadow-lg"
+      ></Image>
     </section>
   );
 };

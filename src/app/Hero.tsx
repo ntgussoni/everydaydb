@@ -25,7 +25,7 @@ export const Hero = () => {
             <div className="relative  h-[120px]  text-transparent drop-shadow-2xl  ">
               <AnimatePresence mode="wait">
                 <motion.span
-                  className="absolute left-0 top-4 h-[100px] w-full bg-gradient-to-r from-[#bc2d0d]  to-[#d70303] bg-clip-text"
+                  className="absolute left-0 top-4 h-full w-full bg-gradient-to-r from-[#bc2d0d]  to-[#d70303] bg-clip-text"
                   key={index}
                   initial="enter"
                   animate="center"

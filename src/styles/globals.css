@@ -1,8 +1,6 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {
@@ -51,20 +49,18 @@
   }
 }
 
-
-
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+@layer base {
+  * {
+    @apply border-border;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 
-  @layer components {
+@layer components {
   .dotted-bg-gray {
-    @apply  inset-0 h-full w-full bg-[radial-gradient(red,transparent_1px)] [background-size:24px_24px];
+    @apply inset-0 h-full w-full bg-[radial-gradient(red,transparent_1px)] [background-size:24px_24px];
   }
 }
 

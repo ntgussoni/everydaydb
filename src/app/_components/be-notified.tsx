@@ -19,16 +19,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Bell } from "lucide-react";
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
-
-const getRandomTransformOrigin = () => {
-  const value = (16 + 40 * Math.random()) / 100;
-  const value2 = (15 + 36 * Math.random()) / 100;
-  return {
-    originX: value,
-    originY: value2,
-  };
-};
+import { AnimatePresence, motion } from "framer-motion";
 
 const getRandomDelay = () => -(Math.random() * 0.7 + 0.05);
 
@@ -49,7 +40,7 @@ export function BeNotified() {
   });
 
   return (
-    <Dialog open={open}>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild onClick={() => setOpen(true)}>
         <Button type="reset">
           <AnimatePresence>

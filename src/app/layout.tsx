@@ -6,6 +6,7 @@ import { Inter as FontSans, Source_Code_Pro } from "next/font/google";
 import { TRPCReactProvider } from "@/trpc/react";
 import { cn } from "@/lib/utils";
 import { Navbar } from "./Navbar";
+import type { Metadata } from "next";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -17,10 +18,29 @@ const fontMono = Source_Code_Pro({
   variable: "--font-mono",
 });
 
-export const metadata = {
-  title: "everydayDB - Easy data store for everyone",
-  description: "Data store API for makers, developers, or anyone.",
+export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.svg" }],
+  title: "everydayDB - Easy data store API for everyone",
+  description: "Data store API for makers, developers, or anyone.",
+  openGraph: {
+    title: "everydayDB - Easy data store API for everyone",
+    description: "Data store API for makers, developers, or anyone.",
+    type: "article",
+    url: "https://everydaydb.com/",
+    images: [
+      {
+        url: "https://everydaydb.com/api/og?title=Data store API for makers, developers, or anyone.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "everydayDB - Easy data store API for everyone",
+    description: "Data store API for makers, developers, or anyone.",
+    images: [
+      "https://ceverydaydb.com/api/og?title=Data store API for makers, developers, or anyone.",
+    ],
+  },
 };
 
 export default function RootLayout({

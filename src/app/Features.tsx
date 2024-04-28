@@ -54,7 +54,7 @@ const M = ({ children, className = "" }) => (
 
 export const Features = () => {
   return (
-    <section id="features" className="container space-y-8 px-24">
+    <section id="features" className="container space-y-8 md:px-24">
       <h2 className="text-3xl font-bold drop-shadow-lg md:text-center lg:text-4xl">
         We got you{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary bg-clip-text text-transparent">
@@ -82,13 +82,13 @@ export const Features = () => {
             <CardContent>{description}</CardContent>
 
             <CardFooter>
-              <div className="mr-8 w-full overflow-hidden rounded-md border  border-primary/60 bg-white py-8 pl-3 font-mono text-sm">
+              <div className=" w-full overflow-hidden overflow-x-scroll rounded-md  border border-primary/60 bg-white py-8 pl-3 font-mono text-sm">
                 {i == 0 && <TextAnim />}
                 {i == 1 && (
                   /**const payload = await client.bucket('movies').get(8);
         console.log('Received payload:', payload); */
 
-                  <div className="flex flex-col gap-1">
+                  <div className="flex w-max flex-col gap-1">
                     <span className="drop-shadow-lg">
                       <span className="select-none text-gray-400 ">1</span>{" "}
                       <M>const</M> <V>payload</V> = <M>await</M> <V>client</V>.
@@ -101,17 +101,8 @@ export const Features = () => {
                   </div>
                 )}
                 {i == 2 && (
-                  <div className="flex flex-col gap-1">
+                  <div className="flex w-max flex-col gap-1">
                     <span className="drop-shadow-lg">
-                      {/**const response = await fetch(
-                        `https://api.example.com/edb/v1/${bucket}/${movieId}`,
-                        {
-                          headers: {
-                            Authorization: `Bearer ${token}`,
-                          },
-                        },
-                      ); 
-                      Using M(method),V(variable name),D(data) wrap the code above*/}
                       <span className="select-none text-gray-400">1</span>{" "}
                       <M>const</M> <V>response</V> = <M>await</M> <V>fetch</V>(
                       <D>
@@ -134,13 +125,6 @@ export const Features = () => {
                       <span className="select-none text-gray-400">5</span>{" "}
                       {"});"}
                     </span>
-
-                    {/* <span className="ml-4">{"headers: {"}</span>
-                    <span className="ml-8">
-                      {"Authorization: `Bearer ${token}`,"}
-                    </span>
-                    <span className="ml-4">{"},"}</span>
-                    <span className="">{"});"}</span> */}
                   </div>
                 )}
               </div>

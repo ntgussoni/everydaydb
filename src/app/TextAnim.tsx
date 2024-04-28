@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import CursorBlinker from "./Blinker";
 
 export default function TextAnim() {
-  const baseText = "$ edb get  --namespace movies --id 8 > movie.txt" as string;
+  const baseText = "$ edb get  --bucket movies --id 8 > movie.txt" as string;
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
   const displayText = useTransform(rounded, (latest) =>

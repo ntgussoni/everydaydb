@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: "https://everydaydb.com/",
     images: [
       {
-        url: "https://everydaydb.com/api/og?title=Data store API for makers, developers, or anyone.&description=Data store API for makers, developers, or anyone.",
+        url: "https://everydaydb.com/api/og?title=everydayDB - Easy data store API for everyone&description=Data store API for makers, developers, or anyone.",
       },
     ],
   },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "everydayDB - Easy data store API for everyone",
     description: "Data store API for makers, developers, or anyone.",
     images: [
-      "https://everydaydb.com/api/og?title=Data store API for makers, developers, or anyone.&description=Data store API for makers, developers, or anyone.",
+      "https://everydaydb.com/api/og?title=everydayDB - Easy data store API for everyone&description=Data store API for makers, developers, or anyone.",
     ],
   },
 };

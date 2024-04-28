@@ -7,7 +7,7 @@ const size = {
 };
 export const runtime = "edge";
 
-export const contentType = "image/png";
+const contentType = "image/png";
 
 function getFont() {
   return fetch(

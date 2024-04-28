@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import { useRouter } from "next/navigation";
@@ -20,7 +21,8 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Bell } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-
+import rays from "../rays.svg";
+import Image from "next/image";
 const getRandomDelay = () => -(Math.random() * 0.7 + 0.05);
 
 const randomDuration = () => Math.random() * 0.07 + 1.23;
@@ -42,33 +44,47 @@ export function BeNotified() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild onClick={() => setOpen(true)}>
-        <Button type="reset">
-          <AnimatePresence>
-            <motion.div
-              key={"expanded"}
-              animate="animate"
-              exit="reset"
-              initial="reset"
-              variants={{
-                animate: {
-                  radius: 2,
-                  rotate: [-3, 4, 5, -3],
-                  transition: {
-                    delay: getRandomDelay(),
-                    repeat: Infinity,
-                    duration: randomDuration(),
+        <span className="inline-flex items-center gap-2">
+          <Image
+            src={rays}
+            alt="rays"
+            height={64}
+            className="hidden opacity-35 md:block"
+          />
+          <Button type="reset" className="shadow-md">
+            <AnimatePresence>
+              <motion.div
+                key={"expanded"}
+                animate="animate"
+                exit="reset"
+                initial="reset"
+                variants={{
+                  animate: {
+                    radius: 2,
+                    rotate: [-3, 4, 5, -3],
+                    transition: {
+                      delay: getRandomDelay(),
+                      repeat: Infinity,
+                      duration: randomDuration(),
+                    },
                   },
-                },
-                reset: {
-                  rotate: 0,
-                },
-              }}
-            >
-              <Bell className=" mr-2 h-4 w-4" />
-            </motion.div>
-          </AnimatePresence>{" "}
-          I want to be notified
-        </Button>
+                  reset: {
+                    rotate: 0,
+                  },
+                }}
+              >
+                <Bell className=" mr-2 h-4 w-4" />
+              </motion.div>
+            </AnimatePresence>{" "}
+            Notify me when it launches
+          </Button>
+          <Image
+            src={rays}
+            alt="rays"
+            height={64}
+            className="hidden h-16 -scale-x-100 opacity-35 md:block"
+          />
+        </span>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>

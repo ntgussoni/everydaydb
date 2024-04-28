@@ -37,7 +37,7 @@ export async function GET(request: Request) {
       <div
         tw="h-full w-full flex flex-col  justify-center py-10 px-20  "
         style={{
-          backgroundImage: "url(http://localhost:3001/bg-og.png)",
+          backgroundImage: "url(http://everydaydb.com/bg-og.png)",
           backgroundSize: "100% 100%",
           fontFamily: "Inter",
         }}
